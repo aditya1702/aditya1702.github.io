@@ -236,7 +236,7 @@
     // https://stackoverflow.com/a/51478809
     $("#save-image").click(function () {
 
-      html2canvas(document.querySelector('#model-output')).then(function (canvas) {
+      html2canvas(document.querySelector('#model-output'), {useCORS: false}).then(function (canvas) {
 
         saveAs(canvas.toDataURL(), 'gen_texts.png');
       });
